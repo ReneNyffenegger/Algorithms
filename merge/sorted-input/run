@@ -1,0 +1,13 @@
+./merge-two-files.pl input-files/1_1 input-files/1_2 output-files/1
+./merge-two-files.pl input-files/2_1 input-files/2_2 output-files/2
+./merge-two-files.pl input-files/3_1 input-files/3_2 output-files/3
+./merge-two-files.pl input-files/4_1 input-files/4_2 output-files/4
+
+diff output-files/1 expected/1
+diff output-files/2 expected/2
+diff output-files/3 expected/3
+diff output-files/4 expected/4
+
+./use-flat.pl
+diff output-files/flat expected/flat
+
